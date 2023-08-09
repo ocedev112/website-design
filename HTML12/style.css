@@ -1,0 +1,279 @@
+*{
+   font-size: 16px;
+   overflow: hidden;
+}
+
+body{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.img_container{
+ margin-top: 2rem;
+ display: grid;
+ align-items: center;
+ grid-template-columns: 20% 20% 20% 20% 20%;
+ grid-template-rows:  20% 20% 20% 20% 20%;
+ gap: 0.5rem;
+ height: 100%;
+ width: 100%;
+ animation: disappear 2s ease 1s forwards;
+ 
+
+}
+
+.images{
+    height: 20vh;
+    width: 20vw;
+    position: relative;
+    top: 1000px;
+}
+.images2{
+    height: 20vh;
+    width: 20vw;
+    position: relative;
+    top: -700px;
+
+}
+
+
+
+.img{
+    height: 100px;
+    width:  200px;
+    object-fit: cover;
+
+   
+}
+.animate--speed{
+   animation-duration: 2.7s;
+   animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+}
+
+.animate--speed1{
+   animation-duration: 1.7s;
+   
+
+}
+
+.animate--speed2{
+    animation-duration: 2.1s;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  
+}
+
+.animate--speed3{
+   animation-duration: 2.7s;
+   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  
+}
+
+
+
+.animate--speed4{
+   animation-duration: 2.1s;
+   animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.animate-quick{
+    animation-delay: 1.4s;
+}
+
+@keyframes slider{
+    from{
+        opacity: 0;
+         object-fit: cover;
+    }
+    25%{
+        opacity: 0;
+
+    }
+    100%{object-fit: cover;
+        opacity: 1;
+        top: 0px;
+         object-fit: cover;
+    }
+}
+@keyframes slider-2{
+    0%{
+
+        object-fit: cover;
+   }
+   25%{
+    
+       object-fit: cover;
+   }
+   100%{
+        opacity: 1;
+        top:0px;
+        object-fit: cover;
+   }
+}
+
+.slidermt{
+    animation-name: slider;
+    animation-fill-mode: forwards;
+}
+
+.slidert{
+    animation-name: slider;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  
+    
+}
+.slider-2t{
+    animation-name: slider-2;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+ 
+}
+
+.zoom-in-out{
+   animation: zoom-in-out 5s 4.8s backwards;
+}
+
+
+@keyframes zoom-in-out{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.5,1.5);
+    }
+    100%{
+        transform: scale(5,5);
+    }
+}
+@keyframes zoom-in-out2{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(0.7,0.7);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+.main-image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+}
+
+.real-img{
+    height: 0px;
+    width: 0px;
+    object-fit: cover;
+    z-index: 999999;
+
+    animation: resize 2s ease-in-out 7.5s forwards;
+}
+
+
+.image-scale{
+    height: 0;
+    width: 0;
+    object-fit: cover;
+
+    animation: resize 2s ease-in-out 7.5s forwards;
+    
+}
+
+h1{
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 999999;
+    font-family: sans-serif;
+    top: 30%;
+}
+
+.search-box{
+    position: relative;
+    background: #221d22;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 2rem;
+    width: 350px;
+    border-radius: 16px;
+    top: 50%;
+    left: 37%;
+}
+
+.search-txt{
+    
+    height: 2rem;
+    width: 350px;
+    border-radius: 16px;
+}
+input{
+   
+    background: #221d22;
+    border: #b6b6b6;
+    color: #ececec;
+    padding: 0px;
+    margin-top: 0;
+    outline: none;
+}
+
+.search-icon{
+    height: 2rem;
+    background-color: #221d22;
+    border-radius: 16px;
+    display: flex;
+    float: right;
+    align-items: center;
+    outline: none;
+    border: none;
+
+    
+}
+
+.search-icon:hover{
+    background-color: #1a6d12;
+}
+
+@keyframes  resize{
+   from{
+    opacity: 0;
+       object-fit: cover;
+   }
+   to{ 
+      opacity: 1;
+      width: 100vw;
+      height: 100vh;
+    
+   }
+
+}
+
+
+
+.main-img{
+    height: 20vh;
+    width: 20vw;
+    position: relative;
+    top: 1000px;
+    animation: slider 2.8s 1s forwards;
+}
+@keyframes disappear{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
